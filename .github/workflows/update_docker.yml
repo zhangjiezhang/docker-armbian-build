@@ -26,18 +26,18 @@ jobs:
             release: "jammy"
             cache-from: "type=gha,scope=docker_build_jammy" # all-automatic GitHub Actions caching
             cache-to: "type=gha,scope=docker_build_jammy,mode=max" # all-automatic GitHub Actions caching, max mode
-          - os: "debian"
-            release: "bookworm"
-            cache-from: "" # no caching
-            cache-to: "" # no caching
+#          - os: "debian"
+#            release: "bookworm"
+#            cache-from: "" # no caching
+#            cache-to: "" # no caching
 #          - os: "debian"
 #            release: "sid"
 #           cache-from: "" # no caching
 #            cache-to: "" # no caching
-          - os: "ubuntu"
-            release: "noble"
-            cache-from: "type=gha,scope=docker_build_noble" # all-automatic GitHub Actions caching
-            cache-to: "type=gha,scope=docker_build_noble,mode=max" # all-automatic GitHub Actions caching, max mode
+#          - os: "ubuntu"
+#            release: "noble"
+#            cache-from: "type=gha,scope=docker_build_noble" # all-automatic GitHub Actions caching
+#            cache-to: "type=gha,scope=docker_build_noble,mode=max" # all-automatic GitHub Actions caching, max mode
     name: "${{ matrix.release }} (${{ matrix.os }})"
     env:
       DOCKERFILE_OS: "${{ matrix.os }}"
