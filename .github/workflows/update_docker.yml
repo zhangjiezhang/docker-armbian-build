@@ -18,7 +18,6 @@ jobs:
   Docker:
 
     runs-on: ubuntu-latest
-    if: ${{ github.repository_owner == 'armbian' }}
     strategy:
       fail-fast: false # let other jobs try to complete if one fails
       matrix:
