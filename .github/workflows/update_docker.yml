@@ -47,8 +47,8 @@ jobs:
       - name: Checkout Armbian Framework
         uses: actions/checkout@v4
         with:
-          repository: armbian/build
-          ref: main
+          repository: zhangjiezhang/armbian_build
+          ref: demo
           fetch-depth: 1
 
       - name: Set up QEMU
